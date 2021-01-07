@@ -14,13 +14,23 @@ theme: Cobalt2, 1
 
 [.build-lists: false]
 
+![left](http://digm.drexel.edu/crs/IDM231/cdn/instructor_materials/images/avatar-Jervo.jpg)
+
+## About Me
+
+- Name: Jervis Thompson
+- Email: st966rc2@drexel.edu
+- GitHub: [@jervo](https://github.com/jervo)
+
+<!-- 
 ![left](images/avatar.jpg)
 
 ## About Me
 
 - Name: Phil Sinatra
 - Email: ps42@drexel.edu
-- GitHub: [@philsinatra](https://github.com/philsinatra)
+- GitHub: [@philsinatra](https://github.com/philsinatra) 
+-->
 
 ## About This Course
 
@@ -166,7 +176,7 @@ theme: Cobalt2, 1
 [.hide-footer]
 [.slidenumbers: false]
 
-![fit](images/progressive-enhancement.png)
+![100%](http://digm.drexel.edu/crs/IDM231/cdn/instructor_materials/images/progressive_enhancement.jpg)
 
 ^ Before diving into the JavaScript language, you need to know how it will fit together with the HTML and CSS in your web pages.
 
@@ -205,7 +215,7 @@ if (current_hour > 18) {
 ```javascript
 const something = '';
 
-const Somthing = '';
+const Something = '';
 ```
 
 ^ JavaScript is case sensitive
