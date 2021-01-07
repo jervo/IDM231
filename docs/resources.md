@@ -26,6 +26,13 @@
 - [JavaScript & jQuery](https://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647)
 - [Javascript For Web Designers](https://abookapart.com/products/javascript-for-web-designers)
 
+## Lynda.com Free Access
+
+- Effective September 5, 2017.. The Free Library of Philadelphia offers remote and on-site access to Lynda.com with a Free Library of Philadelphia membership card. All Drexel students, faculty, staff (and all PA residents) are entitled to a Free Library card at no cost.
+- [You can apply online:](https://know.freelibrary.org/MyResearch/register/policy)
+- [Library Card Access Link:](https://www.lynda.com/portal/patron?org=freelibrary.org)
+
+
 ## Javascript
 
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

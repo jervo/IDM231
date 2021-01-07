@@ -78,17 +78,20 @@ Critiques are opportunities to learn and share what you’ve learned through dem
 
 ## Attendance Policy
 
-Attendance is mandatory. Students are expected to attend all classes and strictly adhere to the project due dates. Lack of participation in class discussions will count against your grade. Students are allowed one unexcused absence. If a student has more than one unexcused absence, his or her grade for the course will be reduced one letter grade. If a student has three or more absences, he or she will receive an F grade. Please also see the official Drexel University Policy on Absences at [http://www.drexel.edu/provost/policyweb/absence.html](http://www.drexel.edu/provost/policyweb/absence.html)
+Attendance is mandatory. Students are expected to attend all classes and strictly adhere to the project due dates. Lack of participation in class discussions will count against your grade. Students are allowed one unexcused absence. If a student has more than one unexcused absence, his or her grade for the course will be reduced one letter grade. If a student has three or more absences, he or she will receive an F grade. Please also see the official Drexel University Policy on Absences at [https://drexel.edu/provost/policies/absence/](https://drexel.edu/provost/policies/absence/)
+
+ - Late -1
+ - Phone disruption -1
 
 ## Add, Drop and Withdrawal Policies
 
-During the pre-enrollment period through the end of the second week of classes for the term, all students, with the exception of 1st term freshmen, may add courses that are free from restrictions/permissions, by using BANNER Web for Students. See [http://www.drexel.edu/provost/policies/course_add.asp](http://www.drexel.edu/provost/policies/course_add.asp)
+During the pre-enrollment period through the end of the second week of classes for the term, all students, with the exception of 1st term freshmen, may add courses that are free from restrictions/permissions, by using BANNER Web for Students. See [https://drexel.edu/provost/policies/course-add-drop/](https://drexel.edu/provost/policies/course-add-drop/)
 
 If you add this course after the start of the term, you are responsible for completing ALL work that you may have missed.
 
-For both graduate and undergraduate students, courses may only be dropped during the “drop period” lasting from the beginning of the enrollment period through the end of the second week of the quarter. Dropping a course results in the course being removed from the student’s academic record without a “W” appearing on the transcript—specifically, neither the course nor the grade of “W” appears on the student’s transcript. See [http://www.drexel.edu/provost/policies/course_drop.asp](http://www.drexel.edu/provost/policies/course_drop.asp)
+For both graduate and undergraduate students, courses may only be dropped during the “drop period” lasting from the beginning of the enrollment period through the end of the second week of the quarter. Dropping a course results in the course being removed from the student’s academic record without a “W” appearing on the transcript—specifically, neither the course nor the grade of “W” appears on the student’s transcript. See [https://drexel.edu/provost/policies/course-add-drop/](https://drexel.edu/provost/policies/course-add-drop/)
 
-Drexel University allows students to drop a course through the end of the sixth week of the term. This means that you will not be allowed to drop a course, even if you are failing, after the sixth week of the term. The number of times you have already been absent, the status of your lab hours and, above all, the result of your midterm testing and other evaluations (chapter tests, quizzes, homework) are therefore your best guide to decide whether or not you should drop the course. See [http://www.drexel.edu/provost/policies/pdf/course_withdrawal.pdf](http://www.drexel.edu/provost/policies/pdf/course_withdrawal.pdf)
+Drexel University allows students to drop a course through the end of the sixth week of the term. This means that you will not be allowed to drop a course, even if you are failing, after the sixth week of the term. The number of times you have already been absent, the status of your lab hours and, above all, the result of your midterm testing and other evaluations (chapter tests, quizzes, homework) are therefore your best guide to decide whether or not you should drop the course. See [https://drexel.edu/provost/policies/course-withdrawal/](https://drexel.edu/provost/policies/course-withdrawal/)
 
 ## Plagiarism Policy
 
