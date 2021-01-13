@@ -193,17 +193,17 @@ theme: Cobalt2, 1
 ## A Basic Script
 
 ```javascript
-const today = new Date();
-const current_hour = today.getHours();
-let greeting = 'Welcome!';
-
-if (current_hour > 18) {
-  greeting = 'Good evening!';
-} else if (current_hour > 12) {
-  greeting = 'Good afternoon!';
-} else if (current_hour > 0) {
-  greeting = 'Good morning!';
-}
+01 const today = new Date();
+02 const current_hour = today.getHours();
+03 let greeting = 'Welcome!';
+04
+05 if (current_hour > 18) {
+06    greeting = 'Good evening!';
+07  } else if (current_hour > 12) {
+08    greeting = 'Good afternoon!';
+09  } else if (current_hour > 0) {
+10   greeting = 'Good morning!';
+11 }
 ```
 
 ^ Javascript is written in plain text, just like HTML and CSS, so you do not need any new tools to write a script. This example adds a greeting into an HTML page. The greeting changes depending on the time of day.
@@ -213,9 +213,9 @@ if (current_hour > 18) {
 ## Case Sensitive
 
 ```javascript
-const something = '';
-
-const Something = '';
+01 const something = '';
+02 
+03 const Something = '';
 ```
 
 ^ JavaScript is case sensitive
@@ -248,11 +248,11 @@ const Something = '';
 ## Linking to a Javascript File
 
 ```html
-<body>
-  <h1>My Website</h1>
-  <p>Welcome to my website.</p>
-  <script src="scripts/myscript.js"></script>
-</body>
+01 <body>
+02   <h1>My Website</h1>
+03   <p>Welcome to my website.</p>
+04   <script src="scripts/myscript.js"></script>
+05 </body>
 ```
 
 ^ When you want to use JavaScript with a web page, you use the HTML `<script>` element to tell the browser it is coming across a script. Its `src` attribute tells people where the Javascript file is stored.
@@ -268,11 +268,11 @@ const Something = '';
 ## Inline Scripts ❌
 
 ```html
-<body>
-  <h1>My Website</h1>
-  <p>Welcome to my website.</p>
-  <script>document.write('<h2>Contents</h2>');</script>
-</body>
+01 <body>
+02   <h1>My Website</h1>
+03   <p>Welcome to my website.</p>
+04   <script>document.write('<h2>Contents</h2>');</script>
+05 </body>
 ```
 
 ^ You may see JavaScript in the HTML between opening `<script>` and closing `</script>` tags, but it is better to put scripts in their own files.
