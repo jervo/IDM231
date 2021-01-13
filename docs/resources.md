@@ -29,8 +29,8 @@
 ## Lynda.com Free Access
 
 - Effective September 5, 2017.. The Free Library of Philadelphia offers remote and on-site access to Lynda.com with a Free Library of Philadelphia membership card. All Drexel students, faculty, staff (and all PA residents) are entitled to a Free Library card at no cost.
-- [You can apply online:](https://know.freelibrary.org/MyResearch/register/policy)
-- [Library Card Access Link:](https://www.lynda.com/portal/patron?org=freelibrary.org)
+- [You can apply online](https://know.freelibrary.org/MyResearch/register/policy)
+- [Library Card Access Link](https://www.lynda.com/portal/patron?org=freelibrary.org)
 
 
 ## Javascript

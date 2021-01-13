@@ -4,9 +4,9 @@ slidenumbers: true
 autoscale: true
 theme: Cobalt2, 1
 
-# IDM 221
+# IDM 231
 
-## Web Design I
+## Web Design II
 
 ### Introduction
 
