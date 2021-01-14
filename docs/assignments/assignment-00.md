@@ -35,6 +35,6 @@ Begin planning your final project by documenting and gathering/preparing assets.
 Submit the following items in [Drexel Blackboard](https://learn.dcollege.net/) under **Assignment: Preparation**:
 
 1. Your URL to your purchased domain (e.g. `http://mywebsite.com`)
-1. Your URL to your Github project page (e.g. `https://github.com/philsinatra/IDM231`)
+1. Your URL to your Github project page (e.g. `https://github.com/philsinatra/idm231-xxx123`)
 
 **Late submissions receive zero points.**
