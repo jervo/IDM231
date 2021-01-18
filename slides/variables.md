@@ -61,12 +61,12 @@ $$
 ## Declaring A Variable
 
 ```javascript
-const one = 1;
-
-let two = 2;
-two = 'two';
-
-var three = 'III'
+01 const one = 1;
+02 
+03 let two = 2;
+04 two = 'two';
+05 
+06 var three = 'III'
 ```
 
 ^ A variable is a literal assigned to an identifier, so you can reference and use it later in the program. Variables do not have any type attached, so you can assign a variable to one type and then reassign it to another type without an error.
@@ -78,15 +78,15 @@ var three = 'III'
 ### `var`
 
 ```javascript
-var a = 0;
-
-var a = 1, b = 2;
-
-function hello() {
-  var c = 3;
-  console.log(a);
-  // the rest of the function
-}
+01 var a = 0;
+02 
+03 var a = 1, b = 2;
+04 
+05 function hello() {
+06   var c = 3;
+07   console.log(a);
+08   // the rest of the function
+09 }
 ```
 
 ^ Originally `var` was the only construct available for defining variables. You can declare multiple variables at once in the same statement. The **scope** is the portion of the code where the variable is visible. A variable initialized with `var` outside of any function is assigned to the global object. Any variable defined inside a function is assigned only to that function.
@@ -96,11 +96,11 @@ function hello() {
 ### `let`
 
 ```javascript
-let a = 0;
-
-function hello() {
-  let a = 'a';
-}
+01 let a = 0;
+02 
+03 function hello() {
+04   let a = 'a';
+05 }
 ```
 
 ^ `let` is a new feature introduced in ES2015. It is essentially a block scoped version of `var`. Modern JavaScript developers might use `let` only and completely disregard `var`.
@@ -110,7 +110,7 @@ function hello() {
 ### `const`
 
 ```javascript
-const a = 'test'
+01 const a = 'test'
 ```
 
 ^ Variables declared with `var` or `let` can be changed later in the program, and reassigned. Once a `const` is initialized, its value can never be changed, and it can't be reassigned to a different value.
@@ -156,13 +156,13 @@ Floats:
 ### Strings
 
 ```javascript
-'A string'
-
-"Another string"
-
-'I\'m a developer'
-
-'A' + 'string'
+01 const sample = 'A string';
+02 
+03 const sample = "Another string";
+04 
+05 const whatIDo = 'I\'m a developer';
+06 
+07 const sample = 'A' + 'string';
 ```
 
 ^ A string type is a sequence of characters, enclosed in quotes or double quotes. A backslash is useful when you need to enter a quote inside a string enclosed in quotes. Strings can be joined using the `+` operator.
@@ -172,15 +172,17 @@ Floats:
 ### Template Strings
 
 ```javascript
-` a string`
-
-`a string with ${something}`
-
-`a string with ${something + somethingElse}`
-
-`a string
-with
-${something}`
+01 const sample = ` a string`;
+02
+03 const sample = `a string with ${something}`;
+04
+05 const sample = `a string with ${something + somethingElse}`
+06 
+07 const something = 'apple sauce';
+08
+09 const sample = `a string
+   with
+   ${something}`;
 ```
 
 ^ Template string literals allow a more powerful way to define strings, where you can perform substitution, and embedding the result of an expression, as well as having multiline strings easily.
@@ -190,9 +192,9 @@ ${something}`
 ### Booleans
 
 ```javascript
-true
-
-false
+01 const openDoor = true;
+02 
+03 const openDoor = false;
 ```
 
 ^ There are two reserved words for booleans: `true` and `false`. There are many comparison operators that can be used to return one or the other. Later we'll see control structures using booleans to determine the flow of the program (if, while etc)
@@ -223,11 +225,11 @@ typeof variable === 'undefined';
 ## Object Types
 
 ```javascript
-function hello() {}
-
-const myObject = {};
-
-const myArray = [];
+01 function hello() {}
+02
+03 const myObject = {};
+04 
+05 const myArray = [];
 ```
 
 ^ Anything that's not a primitive type is an object type.
@@ -273,6 +275,7 @@ i * 2
 | subtraction | - | subtracts values |
 | division | / | divides two values |
 | multiplication | * | multiples values |
+| exponent | ** | first to the power of second operand |
 | increment | ++ | adds one to the current number |
 | decrement | -- | subtracts one from the current number |
 | modulus | % | divides two numbers & returns remainder |
@@ -306,6 +309,10 @@ $$ (2 + 4) * 10 $$
 ---
 
 > Please Excuse My Dear Aunt Sally
+
+^ Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
+
+^ Don't forget LEFT to RIGHT i.e. 4 - 2 + 1 = 3 NOT 1
 
 ---
 
@@ -364,14 +371,14 @@ a || b
 ### Initialize an Array
 
 ```javascript
-const a = [];
-const a = [1,2,3];
-const Array.of(1,2,4);
-const Array(6).fill(1) // init an array of 6 items with value 1
-
-// old syntax (don't use)
-const a = new Array();
-const a = new Array(1,2,3);
+01 const a = [];
+02 const a = [1,2,3];
+03 const Array.of(1,2,4);
+04 const Array(6).fill(1) // init an array of 6 items with value 1
+05
+06 // old syntax (don't use)
+07 const a = new Array();
+08 const a = new Array(1,2,3);
 ```
 
 ---
@@ -379,7 +386,9 @@ const a = new Array(1,2,3);
 ### Get Length of an Array
 
 ```javascript
-const myArrayLength = a.length;
+01 const a = [1,2,3];
+02
+03 const myArrayLength = a.length;
 ```
 
 ---
@@ -387,12 +396,12 @@ const myArrayLength = a.length;
 ### Values in an Array
 
 ```javascript
-const colors = ['white', 'black', 'custom'];
-//               0        1         2
-
-console.log(colors[0]); // white
-console.log(colors[1]); // black
-console.log(colors[2]); // custom
+01 const colors = ['white', 'black', 'custom'];
+02 //               0        1        2
+03
+04 console.log(colors[0]); // white
+05 console.log(colors[1]); // black
+06 console.log(colors[2]); // custom
 ```
 
 ^ Values in an array are accessed as if they are in a numbered list. It is important to know that the numbering of this list starts at zero (not one).
@@ -406,11 +415,11 @@ console.log(colors[2]); // custom
 ### Changing Array Values
 
 ```javascript
-const colors = ['white', 'black', 'custom'];
-
-colors[3] = 'beige';
-
-console.log(colors[3]); // beige
+01 const colors = ['white', 'black', 'custom'];
+02
+03 colors[3] = 'beige';
+04
+05 console.log(colors[3]); // beige
 ```
 
 ^ To access a value from an array, after the array name you specify the index number for that value inside square brackets. You can change the value of an item an array by selecting it and assigning it a new value just as you would any other variable (using the equals sign and the new value for that item).
@@ -420,15 +429,15 @@ console.log(colors[3]); // beige
 ### Adding to an Array
 
 ```javascript
-// add at the end
-myArray.push(4);
-
-// add at the beginning
-myArray.unshift(0);
-
-// Using ES6
-let arrayOne = ['1','2','3'];
-let arrayTwo = [...arrayOne, '4']
+01 // add at the end
+02 myArray.push(4);
+03
+04 // add at the beginning
+05 myArray.unshift(0);
+06
+07 // Using ES6
+08 let arrayOne = ['1','2','3'];
+09 let arrayTwo = [...arrayOne, '4'];
 ```
 
 ---
@@ -436,15 +445,15 @@ let arrayTwo = [...arrayOne, '4']
 ### Remove an Item From an Array
 
 ```javascript
-// from the end
-myArray.pop();
-
-// from the beginning
-a.shift();
-
-// at a random position
-myArray.splice(0, 2); // ge the first 2 items
-myArray.splice(3, 2); // get the 2 items starting from index 3
+01 // from the end
+02 myArray.pop();
+03
+04 // from the beginning
+05 a.shift();
+06
+07 // at a specific position
+08 myArray.splice(0, 2); // get the first 2 items
+09 myArray.splice(3, 2); // get the 2 items starting from index 3
 ```
 
 ---
@@ -452,11 +461,11 @@ myArray.splice(3, 2); // get the 2 items starting from index 3
 ### Join Multiple Arrays
 
 ```javascript
-const a = [1,2];
-const b = [3,4];
-a.concat(b); // 1,2,3,4
-// OR
-const c = [...a, ...b]; // 1,2,3,4
+01 const a = [1,2];
+02 const b = [3,4];
+03 a.concat(b); // 1,2,3,4
+04 // OR
+05 const c = [...a, ...b]; // 1,2,3,4
 ```
 
 ---
@@ -464,14 +473,14 @@ const c = [...a, ...b]; // 1,2,3,4
 ### Lookup the Array for an Element
 
 ```javascript
-myArray.indexOf(); // first matching item or -1
-myArray.lastIndexOf(); // last matching item or -1
-
-myArray.find((element, index, array) => {
-  // return true or false
-});
-
-myArray.includes(value); // returns true or false
+01 myArray.indexOf(); // first matching item or -1
+02 myArray.lastIndexOf(); // last matching item or -1
+03
+04 myArray.find((element, index, array) => {
+05   // return true or false
+06 });
+07
+08 myArray.includes(value); // returns true or false
 ```
 
 ---
@@ -479,9 +488,9 @@ myArray.includes(value); // returns true or false
 ### Sort an Array
 
 ```javascript
-const a = [1,2,3,10,11];
-a.sort(); // 1,10,11,2,3
-a.reverse(); // 3,2,11,10,1
+01 const a = [1,2,3,10,11];
+02 a.sort();   // 1,10,11,2,3
+03 a.reverse(); // 3,2,11,10,1
 ```
 
 ---
@@ -489,11 +498,11 @@ a.reverse(); // 3,2,11,10,1
 ### Copy an Existing Array
 
 ```javascript
-const a = [1, 2, 3]
-//
-const b = Array.from(a);
-// ES6
-const b = [...a]
+01 const a = [1, 2, 3];
+02 //
+03 const b = Array.from(a);
+04 // ES6
+05 const b = [...a];
 ```
 
 ---
@@ -507,11 +516,11 @@ const b = [...a]
 ## Console
 
 ```javascript
-console.log('hello world');
-
-console.log(myVariable);
-
-console.log('myVariable: ' + myVariable);
+01 console.log('hello world');
+02 
+03 console.log(myVariable);
+04 
+05 console.log('myVariable: ' + myVariable);
 ```
 
 ^ Browsers that have a console have a console object, which has several methods that your script can use to display data in the console. The `console.log()` method can write data from a script to the console. Such notes can tell you how far a script has run and what values it has received. Console messages are logged to the console window inside of the browsers Devtools.
