@@ -1,12 +1,12 @@
 build-lists: true
-footer: IDM 221: Web Authoring I
+footer: IDM 231: Scripting for IDM I
 slidenumbers: true
 autoscale: true
 theme: Cobalt2, 1
 
 # IDM 231
 
-## Web Design II
+## Scripting for IDM I
 
 ### Introduction
 
