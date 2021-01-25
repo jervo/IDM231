@@ -41,16 +41,16 @@ theme: Cobalt2, 1
 ### Object Example
 
 ```javascript
-const hotel = {
-  name: 'Hurley\'s Inn',
-  rooms: 40,
-  booked: 25,
-  gym: true,
-  roomTypes: ['twin', 'double', 'suite'],
-  checkAvailability: function() {
-    return this.rooms - this.booked;
-  }
-};
+01 const hotel = {
+02   name: 'Hurley\'s Inn',
+03   rooms: 40,
+04   booked: 25,
+05   gym: true,
+06   roomTypes: ['twin', 'double', 'suite'],
+07   checkAvailability: function() {
+08     return this.rooms - this.booked;
+09   }
+10 };
 ```
 
 ^ Like variables and named functions, properties and methods have a name and a value. In an object, that name is called a **key** (the keys in this example would be name, rooms etc). The value of a property can be a string, number, boolean, array, or even another object. The value of a method is always a function (`checkAvailability`).
@@ -62,19 +62,19 @@ const hotel = {
 ## Accessing Properties & Methods
 
 ```javascript
-const hotel = {
-  name: 'Hurley\'s Inn',
-  checkAvailability: function() {
-    return this.rooms - this.booked;
-  }
-};
-
-// dot syntax
-const hotelName = hotel.name;
-const roomsFree = hotel.checkAvailability();
-
-// bracket syntax
-const hotelName = hotel['name'];
+01 const hotel = {
+02   name: 'Hurley\'s Inn',
+03   checkAvailability: function() {
+04     return this.rooms - this.booked;
+05   }
+06 };
+07 
+08 // dot syntax
+09 const hotelName = hotel.name;
+10 const roomsFree = hotel.checkAvailability();
+11 
+12 // bracket syntax
+13 const hotelName = hotel['name'];
 ```
 
 ^ You access the properties and methods of an object using what's called _dot notation_. Use the name of the object, followed by a period, then the name of the property or method you want to access.
@@ -86,9 +86,9 @@ const hotelName = hotel['name'];
 ## Updating an Object
 
 ```javascript
-hotel.name = 'Aztec';
-
-delete hotel.name;
+01 hotel.name = 'Aztec';
+02 
+03 delete hotel.name;
 ```
 
 ^ To update a property, use the same technique for assigning a variable value, first naming the object name, then the property, followed by the equals sign, and then the new value.
@@ -100,14 +100,14 @@ delete hotel.name;
 ## Creating Many Objects
 
 ```javascript
-function Hotel(name, rooms, booked) {
-  this.name = name;
-  this.rooms = rooms;
-  this.booked = booked;
-  this.checkAvailability = function()  {
-    return this.rooms - this.booked;
-  };
-}
+01 function Hotel(name, rooms, booked) {
+02   this.name = name;
+03   this.rooms = rooms;
+04   this.booked = booked;
+05   this.checkAvailability = function()  {
+06     return this.rooms - this.booked;
+07   };
+08 }
 ```
 
 ^ Sometimes you want several objects to represent similar things. Object constructors can use a function as a template for create objects. First you create the template with the object's properties and methods.
@@ -119,8 +119,8 @@ function Hotel(name, rooms, booked) {
 ## Creating More Objects
 
 ```javascript
-const hurleyHotel = new Hotel('Hurley\'s', 40, 25);
-const aztecHotel = new Hotel('Aztec', 120, 77);
+01 const hurleyHotel = new Hotel('Hurley\'s', 40, 25);
+02 const aztecHotel = new Hotel('Aztec', 120, 77);
 ```
 
 ^ You create **instances** of the object using the construction function. The **new** keyword followed by a call to the function creates a new object. The properties of each object are given as arguments to the function.
