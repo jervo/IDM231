@@ -36,13 +36,12 @@ theme: Cobalt2, 1
 ## Function Example
 
 ```javascript
-function updateMessage() {
-  const el = document.getElementById('message');
-  el.textContent = msg;
-  return msg;
-}
-
-updateMessage();
+01 function updateMessage(msg) {
+02   const el = document.getElementById('message');
+03   el.textContent = msg;
+04 }
+05 
+06 updateMessage('Hello World');
 ```
 
 ^ Functions let you group a series of statements together to perform a specific task. If different parts of a script repeat the same task, you can reuse the function rather than repeating the same set of statements.
@@ -51,18 +50,17 @@ updateMessage();
 
 ---
 
-[.code-highlight: 2-4]
+[.code-highlight: 2-3]
 
 ## Function Structure
 
 ```javascript
-function updateMessage() {
-  const el = document.getElementById('message');
-  el.textContent = msg;
-  return msg;
-}
-
-updateMessage();
+01 function updateMessage(msg) {
+02   const el = document.getElementById('message');
+03   el.textContent = msg;
+04 }
+05 
+06 updateMessage('Hello World');
 ```
 
 ^ The steps the function needs to perform in are packaged up in a code block. A code block consists of one ore more statements contained within curly braces.
@@ -72,13 +70,13 @@ updateMessage();
 ## Function Parameters
 
 ```javascript
-function updateMessage(name, message) {
-  console.log('Hello ' + name + ', ' + message);
-  // or with ES6
-  console.log(`Hello ${name}, ${message}`);
-}
-
-updateMessage();
+01 function updateMessage(name, message) {
+02  console.log('Hello ' + name + ', ' + message);
+03  // or with ES6
+04  console.log(`Hello ${name}, ${message}`);
+05 }
+06
+07 updateMessage('Phil', 'How are you today?');
 ```
 
 ^ Some functions need to be provided with information in order to achieve a given task. Pieces of information passed to a function are known as **parameters**.
@@ -88,16 +86,16 @@ updateMessage();
 ## Working With Parameters
 
 ```javascript
-function getArea(width, height) {
-  return width * height;
-}
-
-getArea(3, 5);
-
-const wallWidth = 3;
-const wallHeight = 5;
-
-getArea(wallWidth, wall_height);
+01 function getArea(width, height) {
+02  return width * height;
+03 }
+04
+05 let totalArea = getArea(3, 5);
+06
+07 const wallWidth = 3;
+08 const wallHeight = 5;
+10 
+11 let totalArea = getArea(wallWidth, wall_height);
 ```
 
 ^ Inside the function, the parameters act like variables.
@@ -107,14 +105,14 @@ getArea(wallWidth, wall_height);
 ## Function Return
 
 ```javascript
-function updateMessage(name, message) {
-  const newMessage = `Hello ${name}, ${message}`;
-  return newMessage;
-}
-
-let myMessage = updateMessage('Phil', 'Welcome to my script!');
-
-console.log(myMessage); // Hello Phil, Welcome to my script!
+01 function updateMessage(name, message) {
+02  const newMessage = `Hello ${name}, ${message}`;
+03  return newMessage;
+04 }
+05
+06 let myMessage = updateMessage('Phil', 'Welcome to my script!');
+07
+08 console.log(myMessage); // Hello Phil, Welcome to my script!
 ```
 
 ^ When you write a function and you expect it to provide you with an answer, the response is known as a **return value**. Using the `return` keyword, the specified value is returned from inside the function, back to the placeholder that originally called the function. When a return statement is encountered, the execution of the function immediately stops and the current value of the returned variable is extracted. If the function contains more lines of code, they are not executed.
@@ -124,9 +122,9 @@ console.log(myMessage); // Hello Phil, Welcome to my script!
 ## Anatomy of a Function
 
 ```javascript
-function sayHello() {
-  console.log('Hello!');
-}
+01 function sayHello() {
+02   console.log('Hello!');
+03 }
 ```
 
 ^ Let's review. You declare a function using the **function** keyword.
@@ -140,11 +138,11 @@ function sayHello() {
 ## Calling a Function
 
 ```javascript
-function sayHello() {
-  console.log('Hello!');
-}
-
-sayHello();
+01 function sayHello() {
+02   console.log('Hello!');
+03 }
+04 
+05 sayHello();
 ```
 
 ^ Once you declare a function, you can execute all the statements between the curly braces with a single line of code. This is know as **calling the function**. This is done by using the function name followed by parentheses. You can call the same function as many times as you want within the same Javascript file.
@@ -154,13 +152,13 @@ sayHello();
 ## Getting Values Out of a Function
 
 ```javascript
-function getArea(width, height) {
-  const area = width * height;
-  return area;
-}
-
-let wall = getArea(3, 5); // 15
-let wall = getArea(8, 5); // 40
+01 function getArea(width, height) {
+02   const area = width * height;
+03   return area;
+04 }
+05 
+06 let wall = getArea(3, 5); // 15
+07 let wall = getArea(8, 5); // 40
 ```
 
 ^ Some functions return information to the code that called them. _wall1_ will be equal to 15, while _wall2_ will hold the value 40. This also demonstrates how the same function can be used to perform the same steps with different values.
@@ -170,17 +168,17 @@ let wall = getArea(8, 5); // 40
 ## Getting Multiple Values Out of a Function
 
 ```javascript
-function getSize(width, height, depth) {
-  const area = width * height;
-  const volume = width * height * depth;
-
-  // Does this work?
-  // Why or why not?
-  return area;
-  return volume;
-}
-
-let sizes = getSize(3,2,3);
+01 function getSize(width, height, depth) {
+02   const area = width * height;
+03   const volume = width * height * depth;
+04 
+05   // Does this work?
+06   // Why or why not?
+07   return area;
+08   return volume;
+09 }
+10 
+11 let sizes = getSize(3,2,3);
 ```
 
 ^ Someone tell me, how could we get more than one value out of a function?
@@ -189,16 +187,19 @@ let sizes = getSize(3,2,3);
 
 ## Return Arrays
 
-```javascript
-function getSize(width, height, depth) {
-  const area = width * height;
-  const volume = width * height * depth;
-  const sizes = [area, volume];
-  return sizes;
-}
+[.code-highlight: 5,6,9,10]
 
-let area = getSize(3,2,3)[0];
-let volume = getSize(3,2,3)[1];
+```javascript
+01 function getSize(width, height, depth) {
+02   const area = width * height;
+03   const volume = width * height * depth;
+04
+05   const sizes = [area, volume];
+06   return sizes;
+07 }
+08 
+09 let area = getSize(3,2,3)[0];
+10 let volume = getSize(3,2,3)[1];
 ```
 
 ^ Functions can return more than one value using an array.
@@ -207,14 +208,16 @@ let volume = getSize(3,2,3)[1];
 
 ## Arrow Functions
 
-```javascript
-const myFunction = function() {
-  // ...
-}
+[.code-highlight: 1,5]
 
-const myFunction = () => {
-  // ...
-}
+```javascript
+01 const myFunction = function() {
+02   // ...
+03 }
+04 
+05 const myFunction = () => {
+06   // ...
+07 }
 ```
 
 ^ ES6 introduced a new syntax for the anatomy of a function, the _arrow function_. Visually, the arrow function simplifies the syntax, making it shorter, which is a welcome change.
@@ -224,13 +227,13 @@ const myFunction = () => {
 ### Arrow Functions - Single Statement
 
 ```javascript
-const myFunction = function() {
-  doSomething();
-}
-
-// Becomes
-
-const myFunction = () => doSomething();
+01 const myFunction = function() {
+02   doSomething();
+03 }
+04 
+05 // Becomes
+06 
+07 const myFunction = () => doSomething();
 ```
 
 ^ If the function of the body contains a single statement, you can omit the brackets and write it all on a single line.
@@ -240,13 +243,13 @@ const myFunction = () => doSomething();
 ### Arrow Function - Parameters
 
 ```javascript
-const myFunction = function(param1, param2) {
-  doSomething(param1, param2);
-};
-
-// Becomes
-
-const myFunction = (param1, param2) => doSomthing(param1, param2);
+01 const myFunction = function(param1, param2) {
+02   doSomething(param1, param2);
+03 };
+04 
+05 // Becomes
+06 
+07 const myFunction = (param1, param2) => doSomthing(param1, param2);
 ```
 
 ^ Parameters are passing in the parentheses.
@@ -256,7 +259,7 @@ const myFunction = (param1, param2) => doSomthing(param1, param2);
 ### Arrow Functions - Single Parameter
 
 ```javascript
-const myFunction = param => doSomething(param);
+01 const myFunction = param => doSomething(param);
 ```
 
 ^ If you have one (and only one) parameter, you can omit the parentheses completely.
@@ -282,12 +285,12 @@ const myFunction = param => doSomething(param);
 ### Local Scope
 
 ```javascript
-function getArea(width, height) {
-  const area = width * height;
-  return area;
-}
-
-console.log(area); // ⚠️ ERROR
+01 function getArea(width, height) {
+02   const area = width * height;
+03   return area;
+04 }
+05 
+06 console.log(area); // ⚠️ ERROR
 ```
 
 ^ When a variable is created inside a function using the var keyword, it can only be used in that function. It is called a local variable or function-level variable. It is said to have local scope or function-level scope. It cannot be accessed outside of the function in which it was declared.
@@ -301,16 +304,16 @@ console.log(area); // ⚠️ ERROR
 ### Global Scope
 
 ```javascript
-function getArea(width, height) {
-  const area = width * height;
-  return area;
-}
-
-let wallSize = getArea(3,2);
-console.log(wallSize); // 6
-
-wallSize = 'dog';
-console.log(wallSize); // dog
+01 function getArea(width, height) {
+02   const area = width * height;
+03   return area;
+04 }
+05 
+06 let wallSize = getArea(3,2);
+07 console.log(wallSize); // 6
+08 
+09 wallSize = 'dog';
+10 console.log(wallSize); // dog
 ```
 
 ^ If you create a variable outside of a function, then it can be used anywhere within the script. It is called a **global** variable and has **global scope**.
@@ -322,13 +325,13 @@ console.log(wallSize); // dog
 ### `var` Does Not Have Block Scope
 
 ```javascript
-var x = 1;
-
-function myFunction() {
-  x = 2;
-}
-
-console.log(x); // 2
+01 var x = 1;
+02 
+03 function myFunction() {
+04   x = 2;
+05 }
+06 
+07 console.log(x); // 2
 ```
 
 ^ Variables declared with the `var` keyword do not have block scope, which means if a variable is introduced within a code block, those variables are scoped to the containing function, and the effects of setting them persist beyond the block itself.
@@ -338,14 +341,14 @@ console.log(x); // 2
 ### `let` & `const` Do Have Block Scope
 
 ```javascript
-let x = 1;
-
-function myFunction() {
-  let x = 2;
-  console.log(x); // 2
-}
-
-console.log(x); // 1
+01 let x = 1;
+02 
+03 function myFunction() {
+04   let x = 2;
+05   console.log(x); // 2
+06 }
+07 
+08 console.log(x); // 1
 ```
 
 ^ By contrast, variables declared with `let` and `const` do have block scope. The `x = 2` is limited in scope to the block in which it was defined. (This example is using `let`, but the rules are the same for `const`)
