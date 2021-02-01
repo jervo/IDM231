@@ -43,11 +43,11 @@ theme: Cobalt2, 1
 ## Evaluation Conditions & Statements
 
 ```javascript
-if (score > 50) {
-  console.log('You passed!');
-} else {
-  console.log('Try again.');
-}
+01 if (score > 50) {
+02   console.log('You passed!');
+03 } else {
+04   console.log('Try again.');
+05 }
 ```
 
 ^ There are two components to a decision:
@@ -63,11 +63,11 @@ if (score > 50) {
 ## Conditions & Statements
 
 ```javascript, [.highlight: 1]
-if (score > 50) {
-  console.log('You passed!');
-} else {
-  console.log('Try again.');
-}
+01 if (score > 50) {
+02   console.log('You passed!');
+03 } else {
+04   console.log('Try again.');
+05 }
 ```
 
 ^ A conditional statement is based on a concept of if/then/else; _if_ a condition is met, _then_ your code executes one or more statements, _else_ your code does something different.
@@ -199,9 +199,9 @@ if (score > 50) {
 ## If Statements
 
 ```javascript
-if (score >= 50) {
-  congratulate();
-}
+01 if (score >= 50) {
+02   congratulate();
+03 }
 ```
 
 ^ The `if` statement evaluates a condition. If the condition evaluates to _true_, any statements in the subsequent code block are executed.
@@ -213,12 +213,14 @@ if (score >= 50) {
 ## If...Else Statements
 
 ```javascript
-if (score >= 50) {
-  congratulate();
-}
-else {
-  encourage();
-}
+01 if (score >= 50) {
+02   congratulate();
+03   // more code here
+04   // more code here
+05 } else {
+06   encourage();
+07   // more code here
+08 }
 ```
 
 ^ The _if else_ statement checks a condition. If it resolves to _true_ the first code block is executed. If the condition resolves to _false_, the second code block is run instead.
@@ -230,16 +232,16 @@ else {
 ## If...Else Alternatives
 
 ```javascript
-const level = 'one';
-let title;
-
-if (level === 'one') {
-  title = 'Level 1';
-} else if (level === 'two') {
-  title = 'Level 2';
-} else if ((level === 'three') || (level === 'four')) {
-  title = 'Level 3 or 4';
-}
+01 const level = 'one';
+02 let title;
+03 
+04 if (level === 'one') {
+05   title = 'Level 1';
+06 } else if (level === 'two') {
+07   title = 'Level 2';
+08 } else if ((level === 'three') || (level === 'four')) {
+09   title = 'Level 3 or 4';
+10 }
 ```
 
 ^ Sometimes `if else` statements can get very large and hard to manage. This small example starts to illustrate that. If your code needs a larger amount of checks and an `if else` statement starts to become hard to manage, you may want to consider a `switch` statement instead.
@@ -249,11 +251,11 @@ if (level === 'one') {
 ## Checking Existence
 
 ```javascript
-const myElement = document.getElementById('header');
-
-if (myElement) {
-  // Element exists, let's do something
-}
+01 const myElement = document.getElementById('header');
+02 
+03 if (myElement) {
+04   // Element exists, let's do something
+05 }
 ```
 
 ^ A common need is to check if an element exists on a page. If it does, we do something, if not, we do something else, or nothing at all.
@@ -263,13 +265,13 @@ if (myElement) {
 ## Checking Existence - Else
 
 ```javascript
-const myElement = document.getElementById('header');
-
-if (myElement) {
-  // Element exists, let's do something
-} else {
-  // Element does not exist, do something else specific.
-}
+01 const myElement = document.getElementById('header');
+02 
+03 if (myElement) {
+04   // Element exists, let's do something
+05 } else {
+06   // Element does not exist, do something else specific.
+07 }
 ```
 
 ---
@@ -283,17 +285,17 @@ if (myElement) {
 ## Switch Statements
 
 ```javascript
-switch (level) {
-  case 'one':
-    title = 'Level 1';
-    break;
-  case 'two':
-    title = 'Level 2';
-    break;
-  default:
-    title = 'Level not 1 or 2';
-    break;
-}
+01 switch (level) {
+02   case 'one':
+03     title = 'Level 1';
+04     break;
+05   case 'two':
+06     title = 'Level 2';
+07     break;
+08   default:
+09     title = 'Level not 1 or 2';
+10     break;
+11 }
 ```
 
 ^ A `switch` statement starts with a variable called the `switch value`. Each `case` indicates a possible value for this variable and the code that should run if the variable matches that value.

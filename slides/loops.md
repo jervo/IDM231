@@ -56,9 +56,9 @@ theme: Cobalt2, 1
 ## For Loop
 
 ```javascript
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
+01 for (let i = 0; i < 10; i++) {
+02   console.log(i);
+03 }
 ```
 
 ^ There are different types of loops. If you need to run code a specific number of times, use a `for` loop. In a `for` loop, the condition is usually a counter which is used to tell how many times the loop should run.
@@ -68,9 +68,9 @@ for (let i = 0; i < 10; i++) {
 ### Loop Counters
 
 ```javascript, [.highlight: 1, 5-7]
-for (let i = 0; i < 10; i++) {
-  console.log(i);
-}
+01 for (let i = 0; i < 10; i++) {
+02   console.log(i);
+03 }
 
 let i = 0;
 i < 10;
@@ -90,13 +90,13 @@ i++
 ### While Loop
 
 ```javascript
-const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
-let i = 0;
-
-while (cars[i]) {
-  console.log(cars[i]);
-  i++;
-}
+01 const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
+02 let i = 0;
+03 
+04 while (cars[i]) {
+05   console.log(cars[i]);
+06   i++;
+07 }
 ```
 
 ^ If you do not know how many times the code should run, you can use a `while` loop. Here the condition can be something other than a counter and the code will continue to loop for as long as the condition is **true**.
@@ -106,25 +106,25 @@ while (cars[i]) {
 ### `forEach` Loop
 
 ```javascript
-const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
-
-cars.forEach(function(car) {
-  console.log('car: ', car);
-});
+01 const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
+02 
+03 cars.forEach(function(car) {
+04   console.log('car: ', car);
+05 });
 ```
 
-^ Another style of loop that is common, especially when you don't necessarily know the total number of items being looped over is the `forEach` loop. Theh `forEach()` method executes a provided function once for each array element.
+^ Another style of loop that is common, especially when you don't necessarily know the total number of items being looped over is the `forEach` loop. Then `forEach()` method executes a provided function once for each array element.
 
 ---
 
 #### forEach Loop With Arrow Function Syntax
 
 ```javascript
-const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
-
-cars.forEach(car => {
-  console.log('car: ', car);
-});
+01 const cars = ['BMW', 'Volvo', 'Saab', 'Ford'];
+02 
+03 cars.forEach(car => {
+04   console.log('car: ', car);
+05 });
 ```
 
 ---
@@ -132,11 +132,11 @@ cars.forEach(car => {
 ### `for...of` Statement
 
 ```javascript
-let numbers = [10, 20, 30];
-
-for (let value of numbers) {
-  console.log(value)
-}
+01 let numbers = [10, 20, 30];
+02 
+03 for (let value of numbers) {
+04   console.log(value)
+05 }
 ```
 
 ^ The `for...of` statement creates a loop iterating over iterable objects (strings, arrays, node lists etc).
@@ -146,11 +146,11 @@ for (let value of numbers) {
 ### `for...in` Statement
 
 ```javascript
-const myObject = {a: 1, b: 2, c: 3 };
-
-for (const property in myObject) {
-  console.log(`myObject.${property}: ${myObject[property]}`);
-}
+01 const myObject = {a: 1, b: 2, c: 3 };
+02 
+03 for (const property in myObject) {
+04   console.log(`myObject.${property}: ${myObject[property]}`);
+05 }
 ```
 
 ^ The `for...in` statement loops over the properties of an object. This syntax is not recommended for use with arrays. Its most practical use is for debugging purposes, being an easy way to check the properties of an object.
@@ -160,8 +160,8 @@ for (const property in myObject) {
 ### `map`
 
 ```javascript
-const numbers = [4, 9, 16, 25];
-const sqrt = numbers.map(number => number*number);
+01 const numbers = [4, 9, 16, 25];
+02 const sqrt = numbers.map(number => number*number);
 ```
 
 ---
