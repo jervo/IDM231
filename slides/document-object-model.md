@@ -28,21 +28,21 @@ theme: Cobalt2, 1
 ## Document Object Model (DOM)
 
 ```html
-<html>
-  <body>
-    <div id="page">
-      <hl id="header">List</hl>
-      <h2>Buy groceries</h2>
-      <ul>
-        <li id="one" class="hot"><em>fresh</em> figs</li>
-        <li id="two" class="hot">pine nuts</li>
-        <li id="three" class="hot">honey</li>
-        <li id="four">balsamic vinegar</li>
-      </ul>
-    </div>
-    <script src="js/list.js"></script>
-  </body>
-</html>
+01 <html>
+02  <body>
+03    <div id="page">
+04      <hl id="header">List</hl>
+05      <h2>Buy groceries</h2>
+06      <ul>
+07        <li id="one" class="hot"><em>fresh</em> figs</li>
+08        <li id="two" class="hot">pine nuts</li>
+09        <li id="three" class="hot">honey</li>
+10        <li id="four">balsamic vinegar</li>
+11      </ul>
+12    </div>
+13    <script src="js/list.js"></script>
+14  </body>
+15 </html>
 ```
 
 ^ As a browser loads a web page, it creates a model of that page. The model is called a DOM tree, and it is stored in the browsers' memory. It consists of four main types of nodes.
@@ -170,8 +170,8 @@ theme: Cobalt2, 1
 ## Methods That Select Individual Elements
 
 ```javascript
-// object.method('parameter')
-document.getElementById('one');
+01 // object.method('parameter')
+02 document.getElementById('one');
 ```
 
 ^ `getElementById()` is the quickest and most efficient way to access an element because no two elements can share the same value for their `id` attribute.
@@ -187,10 +187,10 @@ document.getElementById('one');
 ## Methods That Select Individual Elements: `querySelector`
 
 ```javascript
-// object.method('parameter')
-document.getElementById('one');
-
-document.querySelector('#one');
+01 // object.method('parameter')
+02 document.getElementById('one');
+03 
+04 document.querySelector('#one');
 ```
 
 ^ `querySelector()` is more flexible because its parameter is a CSS selector, which means it can be used to accurately target many more elements.
@@ -200,17 +200,17 @@ document.querySelector('#one');
 ## Methods That Select Multiple Elements
 
 ```javascript
-// Select all 'h1' elements
-document.getElementsByTagName('h1')
-
-// Select all elements that include a class 'hot'
-document.getElementsByClassName('hot')
-
-// Select all 'li' elements
-document.querySelectorAll('li')
-
-// Select all 'li' elements that include a class 'hot'
-document.querySelectorAll('li[class="hot"]')
+01 // Select all 'h1' elements
+02 document.getElementsByTagName('h1')
+03 
+04 // Select all elements that include a class 'hot'
+05 document.getElementsByClassName('hot')
+06 
+07 // Select all 'li' elements
+08 document.querySelectorAll('li')
+09 
+10 // Select all 'li' elements that include a class 'hot'
+11 document.querySelectorAll('li[class="hot"]')
 ```
 
 ^ When a DOM method can return more than one element, it returns a NodeList. A NodeList is a collection of element nodes. Each node is given an index number. The order in which the element nodes are stored in a NodeList is the same order that they appear in the HTML page. NodeLists look like arrays and are numbered like arrays.
@@ -229,11 +229,11 @@ document.querySelectorAll('li[class="hot"]')
 ### The `item()` method
 
 ```javascript
-const elements = document.getElementsByClassName('hot');
-
-if (elements.length >= 1) {
-  const firstItem = elements.item(0);
-}
+01 const elements = document.getElementsByClassName('hot');
+02 
+03 if (elements.length >= 1) {
+04   const firstItem = elements.item(0);
+05 }
 ```
 
 ^ NodeLists have a method called `item()` which will return an individual node from the NodeList. You specify the index number of the element you want as a parameter of the method.
@@ -243,11 +243,11 @@ if (elements.length >= 1) {
 ### Array Syntax
 
 ```javascript
-const elements = document.getElementsByClassName('hot');
-
-if (elements.length >= 1) {
-  const firstItem = elements[0];
-}
+01 const elements = document.getElementsByClassName('hot');
+02 
+03 if (elements.length >= 1) {
+04   const firstItem = elements[0];
+05 }
 ```
 
 ^ Array syntax is preferred over the `item()` method because it is faster.
@@ -257,11 +257,11 @@ if (elements.length >= 1) {
 ## Repeating Actions For An Entire Node List
 
 ```javascript
-const hotItems = document.querySelectorAll('li.hot');
-
-for (let i = 0; i < hotItems.length; i++) {
-  hotItems[i].className = 'cool';
-}
+01 const hotItems = document.querySelectorAll('li.hot');
+02 
+03 for (let i = 0; i < hotItems.length; i++) {
+04   hotItems[i].className = 'cool';
+05 }
 ```
 
 ^ When you have a NodeList, you can loop through each node in the collection and apply the same statements to each.
@@ -291,12 +291,12 @@ for (let i = 0; i < hotItems.length; i++) {
 ## Adding Elements Using DOM Manipulation: `appendChild`
 
 ```javascript
-const newElement = document.createElement('li');
-const newText = document.createTextNode('beer');
-newElement.appendChild(newText);
-
-const position = document.getElementsByTagName('ul')[0];
-position.appendChild(newElement);
+01 const newElement = document.createElement('li');
+02 const newText = document.createTextNode('beer');
+03 newElement.appendChild(newText);
+04 
+05 const position = document.getElementsByTagName('ul')[0];
+06 position.appendChild(newElement);
 ```
 
 ---
@@ -320,10 +320,10 @@ position.appendChild(newElement);
 ## Removing Elements Via DOM Manipulation: `removeChild`
 
 ```javascript
-const removeElement = document.getElementsByTagName('li')[3];
-const parentElement = removeElement.parentNode;
-
-parentElement.removeChild(removeElement);
+01 const removeElement = document.getElementsByTagName('li')[3];
+02 const parentElement = removeElement.parentNode;
+03 
+04 parentElement.removeChild(removeElement);
 ```
 
 ---
@@ -331,7 +331,7 @@ parentElement.removeChild(removeElement);
 ## Attribute Nodes
 
 ```javascript
-document.getElementById('one').getAttribute('class');
+01 document.getElementById('one').getAttribute('class');
 ```
 
 ^ Once you have an element node, you can use other properties and methods on that element node to access and change its attributes. There are two steps to accessing and updating attributes:
