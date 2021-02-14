@@ -127,15 +127,15 @@ theme: Cobalt2, 1
 ## Traditional DOM Event Handlers
 
 ```javascript
-// element.event = code
-// element.onevent = functionName;
-
-function checkUserName() {
-  // code to check user name
-}
-
-const el = document.getElementById('username');
-el.onblur = checkUserName;
+01 // element.event = code
+02 // element.onevent = functionName;
+03 
+04 function checkUserName() {
+05   // code to check user name
+06 }
+07 
+08 const el = document.getElementById('username');
+09 el.onblur = checkUserName;
 ```
 
 ^ Here is the syntax to bind an event to an element using an event handler, and to indicate which function should execute when that event fires.
@@ -149,10 +149,10 @@ el.onblur = checkUserName;
 ## Event Listeners
 
 ```javascript
-element.addEventListener('event', functionName [, Boolean]);
-
-const myDiv = document.getElementById('myDiv');
-myDiv.addEventListener('click', myFunction, false);
+01 element.addEventListener('event', functionName [, Boolean]);
+02 
+03 const myDiv = document.getElementById('myDiv');
+04 myDiv.addEventListener('click', myFunction, false);
 ```
 
 ^ Event listeners can deal with more than one function at a time. Here is the syntax to bind an event to an element using an event listener, and to indicate which function should execute when that event fires.
@@ -170,12 +170,12 @@ myDiv.addEventListener('click', myFunction, false);
 ## Event Listeners (continued)
 
 ```javascript
-function checkUserName() {
-  // code to check user name
-}
-
-const el = document.getElementById('username');
-el.addEventListener('blur', checkUserName, false);
+01 function checkUserName() {
+02   // code to check user name
+03 }
+04 
+05 const el = document.getElementById('username');
+06 el.addEventListener('blur', checkUserName, false);
 ```
 
 ^ Let's look at this example in the browser _(examples/events/listeners.html)_
@@ -185,9 +185,9 @@ el.addEventListener('blur', checkUserName, false);
 ### Using Parameters With Event Handlers/Listeners
 
 ```javascript
-el.addEventListener('blur', function() {
-  checkUserName(5);
-}, false);
+01 el.addEventListener('blur', function() {
+02   checkUserName(5);
+03 }, false);
 ```
 
 ^ Because you cannot have parentheses after the function names in event handlers/listeners, passing arguments requires a workaround. We can use _anonymous_ functions.
