@@ -44,24 +44,26 @@ theme: Cobalt2, 1
 ---
 
 ```javascript
-localStorage.setItem('email', 'grace@gmail.com');
-const email = localStorage.getItem('email');
-
-localStorage.email = 'grace@gmail.com';
-const email = localStorage.email;
+01 localStorage.setItem('email', 'grace@gmail.com');
+02 const email = localStorage.getItem('email');
+03 
+04 localStorage.email = 'grace@gmail.com';
+05 const email = localStorage.email;
 ```
 
 ---
 
 ```javascript
-sessionStorage.setItem('itemname', 'value');
-const itemName = sessionStorage.getItem('itemname');
-
-sessionStorage.removeItem('itemname');
-sessionStorage.clear();
+01 sessionStorage.setItem('itemname', 'value');
+02 const itemName = sessionStorage.getItem('itemname');
+03 
+04 sessionStorage.removeItem('itemname');
+05 sessionStorage.clear();
 ```
 
-^ _Show storage tab in devTools_
+^ _Show "Storage" tab in devTools Firefox_
+
+^ _Show "Application" tab, "Storage" section in devTools Chrome_
 
 ---
 

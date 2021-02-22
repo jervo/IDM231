@@ -21,9 +21,9 @@ theme: Cobalt2, 1
 ## `setTimeout()`
 
 ```javascript
-setTimeout(() => {
-  // run after 2 seconds
-}, 2000);
+01 setTimeout(() => {
+02   // run after 2 seconds
+03 }, 2000);
 ```
 
 ^ When writing JavaScript code, you might want to delay the execution of a function. We'll explore how to schedule functions in the future.
@@ -35,22 +35,22 @@ setTimeout(() => {
 ---
 
 ```javascript
-const myFunction = (firstParam, secondParam) => {
-  // do something
-}
-
-setTimeout(myFunction, 2000, firstParam, secondParam);
+01 const myFunction = (firstParam, secondParam) => {
+02   // do something
+03 }
+04 
+05 setTimeout(myFunction, 2000, firstParam, secondParam);
 ```
 
 ---
 
 ```javascript
-const id = setTimeout(() => {
-  // run after 2 seconds
-}, 2000)
-
-// I changed my mind
-clearTimeout(id);
+01 const id = setTimeout(() => {
+02   // run after 2 seconds
+03 }, 2000)
+04 
+05 // I changed my mind
+06 clearTimeout(id);
 ```
 
 ^ `setTimeout` returns the timer id. This is generally not used, but you can store this id and clear it if you want to delete the scheduled function execution.
@@ -60,13 +60,13 @@ clearTimeout(id);
 ### Zero Delay
 
 ```javascript
-setTimeout(() => {
-  console.log('after');
-}, 0)
-
-console.log('before');
-
-// before after
+01 setTimeout(() => {
+02   console.log('after');
+03 }, 0)
+04 
+05 console.log('before');
+06 
+07 // before after
 ```
 
 ^ If you specify a timeout delay to 0, the callback will execute as soon as possible, but after the current function execution.
@@ -78,9 +78,9 @@ console.log('before');
 ## `setInterval()`
 
 ```javascript
-setInterval(() => {
-  // runs every 2 seconds
-}, 2000);
+01 setInterval(() => {
+02   // runs every 2 seconds
+03 }, 2000);
 ```
 
 ^ `setInterval` is a function similar to `setTimeout`, with a difference: instead of running the callback function once, it will run it forever, at the specific time interval you specify in milliseconds.
@@ -88,12 +88,14 @@ setInterval(() => {
 ---
 
 ```javascript
-const interval = setInterval(() => {
-  // runs every 2 seconds
-  if (App.somethingIWait === 'arrived') {
-    clearInterval(interval);
-    return;
-  }
-  // otherwise do nothing
-}, 2000);
+01 const interval = setInterval(() => {
+02   // runs every 2 seconds
+03   if (App.somethingIWant === 'arrived') {
+04     clearInterval(interval);
+05     // run code
+06     console.log('Your package has arrived');
+07     return;
+08   }
+09   // otherwise do nothing
+10 }, 2000);
 ```
