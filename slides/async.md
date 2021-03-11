@@ -20,7 +20,7 @@ theme: Cobalt2, 1
 
 ^ In the current consumer computers, every program runs for a specific time slot, and then it stops its execution to let another program continue its execution. This thing runs in a cycle so fast that's impossible to notice, and we think our computers run many programs simultaneously, but this is an illusion (except on multiprocessor machines).
 
-^ Normally, programming languages are synchronous, which ways of working with asynchronicity. JavaScript is synchronouse by default, meaning lines of code are executed in a series, one after another.
+^ Normally, programming languages are synchronous, with ways of working with asynchronicity. JavaScript is synchronouse by default, meaning lines of code are executed in a series, one after another.
 
 ^ But JavaScript's main job, at least in the beginning, was to respond to user actions like `onClick`, `onMouseHover` etc. the browser provides a way for the synchronous programming model to handle this kind of functionality.
 

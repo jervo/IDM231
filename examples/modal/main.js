@@ -23,7 +23,7 @@ btnModal.forEach(button => {
   button.addEventListener(
     'click',
     () => {
-      modal.hidden = !modal.hidden;
+      // modal.hidden = !modal.hidden;
     },
     false
   );

@@ -30,10 +30,10 @@ theme: Cobalt2, 1
 ### Object
 
 ```javascript
-{
-  first: 'Grace',
-  last: 'Hopper'
-}
+01 {
+02   first: 'Grace',
+03   last: 'Hopper'
+04 }
 ```
 
 ---
@@ -50,10 +50,10 @@ Grace,Hopper
 ## XML
 
 ```xml
-<person>
-  <first>Grace</first>
-  <last>Hopper</last>
-</person>
+01 <person>
+02   <first>Grace</first>
+03   <last>Hopper</last>
+04 </person>
 ```
 
 ---
@@ -61,10 +61,10 @@ Grace,Hopper
 ### JSON Data
 
 ```json
-{
-  "first": "Grace",
-  "last": "Hopper"
-}
+01 {
+02   "first": "Grace",
+03   "last": "Hopper"
+04 }
 ```
 
 ---
@@ -103,19 +103,19 @@ Grace,Hopper
 ---
 
 ```json
-{
-  "employee": {
-    "id": 1001,
-    "startDate": "7/18/2016",
-    "endDate": null,
-    "isActive": true,
-    "reviewScores": [88,95,96,89],
-    "region": {
-      "name": "Northwest",
-      "joined": "8/20/2016"
-    }
-  }
-}
+01 {
+02   "employee": {
+03     "id": 1001,
+04     "startDate": "7/18/2016",
+05     "endDate": null,
+06     "isActive": true,
+07     "reviewScores": [88,95,96,89],
+08     "region": {
+09       "name": "Northwest",
+10       "joined": "8/20/2016"
+11     }
+12   }
+13 }
 ```
 
 ---
@@ -127,8 +127,8 @@ Grace,Hopper
 ## JSON `stringify()` Method
 
 ```javascript
-const task = 'Go to the store';
-const json = JSON.stringify(task);
+01 const task = 'Go to the store';
+02 const json = JSON.stringify(task);
 
 // "Go to the store"
 ```
@@ -138,10 +138,10 @@ const json = JSON.stringify(task);
 ---
 
 ```javascript
-const task = {
-  task: 'Go to the store'
-};
-const json = JSON.stringify(task);
+01 const task = {
+02   task: 'Go to the store'
+03 };
+04 const json = JSON.stringify(task);
 
 // {"task": "Go to the store"}
 ```
@@ -149,10 +149,10 @@ const json = JSON.stringify(task);
 ---
 
 ```javascript
-const tasks = [];
-tasks.push('Go to the store');
-tasks.push('Pick up the laundry');
-const json = JSON.stringify(tasks);
+01 const tasks = [];
+02 tasks.push('Go to the store');
+03 tasks.push('Pick up the laundry');
+04 const json = JSON.stringify(tasks);
 
 // ["Go to the store", "Pick up the laundry"]
 ```
@@ -162,8 +162,8 @@ const json = JSON.stringify(tasks);
 ## JSON `parse()` Method
 
 ```javascript
-const json = "{\"Go to the store\", \"Do the laundry\"}";
-const tasks = JSON.parse(json);
+01 const json = "{\"Go to the store\", \"Do the laundry\"}";
+02 const tasks = JSON.parse(json);
 
 // ["Go to the store", "Do the laundry"]
 ```
